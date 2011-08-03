@@ -1,0 +1,14 @@
+#!/usr/bin/python
+
+def build(bld):
+    bld.install_files('${PREFIX}/include/ranking',
+                      bld.path.ant_glob('**/*.h'),
+                      cwd=bld.path.find_dir('src/ranking'),
+                      relative_trick=True)
+
+    bld.shlib(source = ['pointwise/prank.cc',
+                        ],
+              target = 'ranking',
+              includes=bld.SRCPATH)
+
+    bld.recurse('test')
