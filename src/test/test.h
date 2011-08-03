@@ -70,7 +70,6 @@ int Run (T& ranking,
   for (size_t i = 0; i < test.size(); ++i) {
     int result;
     result = ranking.Test(test[i].fv);
-    std::cout << test[i].level << " " << result << std::endl;
     if (test[i].level == result)
       ++score;
   }

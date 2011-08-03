@@ -21,7 +21,7 @@ inline float InnerProduct(const FeatureVector& fv,
                           const WeightVector& wv) {
   float score = 0.f;
   for (size_t i = 0; i < fv.size(); ++i) {
-    if (fv[i].first >= wv.size()) continue;
+    if (fv[i].first >= (int)wv.size()) continue;
     score += fv[i].second * wv[fv[i].first];
   }
   return score;
