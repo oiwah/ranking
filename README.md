@@ -4,7 +4,7 @@ Ranking Library -- Several Online Ranking Algorithms
 About
 =====
 
-Library for Ranking implemented by C++
+Library for Learning to Rank implemented by C++
 
 
 Pointwise Methods
