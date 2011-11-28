@@ -11,6 +11,7 @@ Pointwise Methods
 ----------
 
 * PRank
+* McRank (Logistic Regression Ver.)
 
 Author
 ------

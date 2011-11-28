@@ -1,4 +1,5 @@
 #include <pointwise/prank.h>
+#include <pointwise/mcrank.h>
 
 #include <test/test.h>
 
@@ -25,6 +26,12 @@ int main(int argc, char** argv) {
   ranking::PRank prank;
   prank.init(5);
   if (ranking::Run(prank, "PRank", train, test) == -1) {
+    std::cerr << "error occurring!" << std::endl;
+  }
+
+  ranking::McRank mcrank;
+  mcrank.init(5);
+  if (ranking::Run(mcrank, "McRank", train, test) == -1) {
     std::cerr << "error occurring!" << std::endl;
   }
 

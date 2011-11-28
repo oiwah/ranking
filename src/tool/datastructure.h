@@ -1,6 +1,8 @@
 #ifndef RANKING_TOOL_DATASTRUCTURE_H_
 #define RANKING_TOOL_DATASTRUCTURE_H_
 
+#include <cstring>
+
 #include <utility>
 #include <vector>
 
@@ -8,6 +10,7 @@ namespace ranking {
 typedef std::pair<int, float> FeaturePair;
 typedef std::vector<FeaturePair> FeatureVector;
 typedef std::vector<float> WeightVector;
+typedef std::vector<WeightVector> WeightMatrix;
 
 struct Document {
   int level;

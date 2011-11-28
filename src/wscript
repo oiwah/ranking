@@ -6,8 +6,10 @@ def build(bld):
                       cwd=bld.path.find_dir('src/ranking'),
                       relative_trick=True)
 
-    bld.shlib(source = ['pointwise/prank.cc',
-                        ],
+    bld.shlib(source = [
+            'pointwise/prank.cc',
+            'pointwise/mcrank.cc',
+            ],
               target = 'ranking',
               includes=bld.SRCPATH)
 

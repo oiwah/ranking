@@ -26,7 +26,8 @@ void PRank::Train(const Queries& queries, size_t iteration) {
     for (size_t i = 0; i < queries.size(); ++i) {
       const Query &q = queries[i];
       for (size_t j = 0; j < q.size(); ++j) {
-        Train(q[j]);
+        const Document& d = q[j];
+        Train(d);
       }
     }
   }
